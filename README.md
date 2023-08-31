@@ -12,22 +12,78 @@ In this repository, you'll find a collection of scenarios designed to help you m
 
 ## How to Play
 
-1. **Clone the Repository**: Start by cloning this repository to your local machine:
+### Getting started
+
+1. **Clone the repository**: 
 
    ```bash
    git clone <repository-url>
    cd Rebase-Playground
    ```
 
-2. **Scenario Branches**: Each scenario is represented by a separate branch. Check out a scenario branch to dive into the action:
+2. **Checkout scenario branches**: 
 
    ```bash
    git checkout <scenario-branch>
    ```
 
-3. **Experience the Scenarios**: Within each scenario branch, you'll encounter unique challenges that highlight different aspects of rebasing. From conflicting changes to interactive rebasing, you'll uncover the power of rebasing step by step.
+### Rebasing
 
-4. **Discussion and Learning**: After experimenting with a scenario, reflect on your experience and join discussions with fellow developers. Share your insights, ask questions, and learn from others' perspectives.
+1. **Ensure your base branch is up to date**:
+
+   ```bash
+   git checkout <base-branch>
+   git pull
+   ```
+
+2. **Checkout your scenario branch**: 
+
+   ```bash
+   git checkout <scenario-branch>
+   ```
+   or
+   ```bash
+   git checkout -
+   ```
+
+3. **Rebase the scenario branch**: 
+
+   ```bash
+   git rebase <base-branch>
+   ```
+<img align="right" src="./.memes/problem_solved.jpg" width="150" hspace="10">
+
+4. **Force push**: 
+
+   ```bash
+   git push --force
+   ```
+
+### Interactive Rebasing
+
+1. **Checkout your scenario branch**: 
+
+   ```bash
+   git checkout <scenario-branch>
+   ```
+
+3. **Start the interactive rebase**: 
+
+   ```bash
+   git rebase -i HEAD~<number of commits you would like to change>
+   ```
+
+4. **Learn how to use vim**: Check [here](https://opensource.com/article/19/3/getting-started-vim) for a short introduction
+
+<img align="center" src="./files/vim.png" width="870" hspace="10">
+
+5. **Safe your changes**
+
+6. **force push**
+
+   ```bash
+   git push --force
+   ```
 
 ## Scenarios to Explore
 
