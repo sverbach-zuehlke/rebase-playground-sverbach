@@ -115,3 +115,30 @@ Let's embark on a journey to enhance our Git skills and understand the art of re
 
 Remember, this playground is all about exploration and learning, so don't hesitate to try new things, ask questions, and share your discoveries. Happy rebasing! 🎉
 
+<br clear="left"/>
+
+## Guidelines
+
+<img align="right" width="230" hspace="20" src="./.memes/fun_game.png">
+
+For all work outside of this repository, please follow these guildelines to ensure a smooth workflow. The rebase method is supposed to help you and your team with your work, not become a fun game for 42 admins. 
+
+1. **Avoid rebasing deployment branches:**
+Rebasing public branches needs good communication and planning and should not be done regularly. If you need to rebase a deployment branch, please communicate it with **everyone** beforehand. Therefore in repositories with more then one deployment branch (e.g. main and develop), I would advise to use merge commits between them.
+
+2. **Communicate:** 
+If you plan to rebase a branch that others are collaborating on, communicate your intention to prevent conflicts and confusion.
+
+3. **Backup before rebasing**
+Create a backup branch or stash your changes before initiating a rebase. This ensures you can recover easily if something goes wrong.
+This can be done as follows:
+``` bash
+git checkout -b <feature branch> <backup of feature branch>
+```
+
+4. **Keep your branches up to date:**
+Long standing feature branches should be rebased regularly to avoid many merge conflicts. 
+Before merging a PR into a deployment branch, please rebase your branch on the base branch and clean up your commit history.
+
+6. **Ask if you're unsure:**
+Introducing rebasing into your workflow can be a challenge, especially at the beginning. If you are unsure about something, ask your team and plan together. 
